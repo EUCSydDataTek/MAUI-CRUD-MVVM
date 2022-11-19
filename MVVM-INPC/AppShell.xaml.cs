@@ -1,0 +1,13 @@
+﻿using MVVM_INPC.Views;
+
+namespace MVVM_INPC;
+
+public partial class AppShell : Shell
+{
+	public AppShell()
+	{
+		InitializeComponent();
+
+        Routing.RegisterRoute(nameof(DetailPage), typeof(DetailPage));
+    }
+}

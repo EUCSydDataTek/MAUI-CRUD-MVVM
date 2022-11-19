@@ -11,15 +11,23 @@ public class MainPageViewModel : BaseViewModel
         ThePerson = new Person { Name = "Katja", Age = 28 };
     }
 
-    private Command goToEditCommand;
-    public ICommand GoToEditCommand => goToEditCommand ??= new Command(async () =>
+    private Command goToDetailsCommand;
+    public ICommand GoToDetailsCommand => goToDetailsCommand ??= new Command(async () =>
         {
             if (ThePerson == null)
                 return;
 
-            await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>
+            await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
             {
                 {"MyPerson", ThePerson }
             });
+        });
+
+
+    private Command makeOlderCommand;
+    public ICommand MakeOlderCommand => makeOlderCommand ??= new Command(
+        execute: () =>
+        {
+            ThePerson.Age++;
         });
 }

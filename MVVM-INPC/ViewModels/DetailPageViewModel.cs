@@ -4,7 +4,7 @@ using System.Windows.Input;
 namespace MVVM_INPC.ViewModels;
 
 [QueryProperty(nameof(Person), "MyPerson")]
-public class DetailPageViewModel : BaseViewModel
+public class DetailsPageViewModel : BaseViewModel
 {
     Person person;
     public Person Person
@@ -18,6 +18,6 @@ public class DetailPageViewModel : BaseViewModel
         execute: () =>
         {
             Person.Age++;
-            OnPropertyChanged(nameof(Person));  // Refresh the binding to Person-object
+            //OnPropertyChanged(nameof(Person));  // Refresh the binding to Person-object
         });
 }

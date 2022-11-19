@@ -20,8 +20,8 @@ public static class MauiProgram
 		builder.Services.AddSingleton<MainPage>();
 		builder.Services.AddSingleton<MainPageViewModel>();
 
-		builder.Services.AddTransient<DetailPage>();
-		builder.Services.AddTransient<DetailPageViewModel>();
+		builder.Services.AddTransient<DetailsPage>();
+		builder.Services.AddTransient<DetailsPageViewModel>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

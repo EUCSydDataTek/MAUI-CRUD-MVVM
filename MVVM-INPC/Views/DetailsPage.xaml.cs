@@ -2,9 +2,9 @@ using MVVM_INPC.ViewModels;
 
 namespace MVVM_INPC.Views;
 
-public partial class DetailPage : ContentPage
+public partial class DetailsPage : ContentPage
 {
-	public DetailPage(DetailPageViewModel vm)
+	public DetailsPage(DetailsPageViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

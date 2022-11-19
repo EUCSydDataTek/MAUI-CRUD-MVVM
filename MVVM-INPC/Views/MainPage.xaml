@@ -28,9 +28,14 @@
                 HorizontalOptions="Center" />
 
             <Button
-                Text="Edit"
+                Text="Details"
                 HorizontalOptions="Center" 
-                Command="{Binding GoToEditCommand}"/>
+                Command="{Binding GoToDetailsCommand}"/>
+
+            <Button
+                Text="Make Older"
+                HorizontalOptions="Center" 
+                Command="{Binding MakeOlderCommand}"/>
 
         </VerticalStackLayout>
     </ScrollView>

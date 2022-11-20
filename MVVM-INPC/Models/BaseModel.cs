@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 namespace MVVM_INPC.Models;
 public class BaseModel : INotifyPropertyChanged
 {
+    public int Id { get; set; }
     protected bool SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyName = "", Action onChanged = null)
     {
         if (EqualityComparer<T>.Default.Equals(backingStore, value))

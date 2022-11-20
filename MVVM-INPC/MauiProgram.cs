@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MVVM_INPC.Services;
 using MVVM_INPC.ViewModels;
 using MVVM_INPC.Views;
 
@@ -17,14 +18,19 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<MainPage>();
-		builder.Services.AddSingleton<MainPageViewModel>();
+		builder.Services.AddSingleton<IDataService, DataService>();
+
+		builder.Services.AddSingleton<ListPage>();
+		builder.Services.AddSingleton<ListPageViewModel>();
 
 		builder.Services.AddTransient<DetailsPage>();
 		builder.Services.AddTransient<DetailsPageViewModel>();
 
+        builder.Services.AddTransient<AddEditPage>();
+        builder.Services.AddTransient<AddEditPageViewModel>();
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();

@@ -6,6 +6,10 @@
              Title="DetailsPage"
              x:DataType="vm:DetailsPageViewModel">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="EDIT" Command="{Binding GoToAddEditCommand}" />
+    </ContentPage.ToolbarItems>
+
     <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -21,11 +25,6 @@
                 SemanticProperties.HeadingLevel="Level2"
                 FontSize="18"
                 HorizontalOptions="Center" />
-
-        <Button
-                Text="Make Older"
-                HorizontalOptions="Center" 
-                Command="{Binding MakeOlderCommand}"/>
 
     </VerticalStackLayout>
 </ContentPage>

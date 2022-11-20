@@ -1,4 +1,5 @@
 ﻿using MVVM_INPC.Models;
+using MVVM_INPC.Views;
 using System.Windows.Input;
 
 namespace MVVM_INPC.ViewModels;
@@ -13,11 +14,13 @@ public class DetailsPageViewModel : BaseViewModel
         set => SetProperty(ref person, value);
     }
 
-    private Command makeOlderCommand;
-    public ICommand MakeOlderCommand => makeOlderCommand ??= new Command(
-        execute: () =>
+    private Command goToAddEditCommand;
+
+    public ICommand GoToAddEditCommand => goToAddEditCommand ??= new Command(async () =>
+    {
+        await Shell.Current.GoToAsync(nameof(AddEditPage), true, new Dictionary<string, object>
         {
-            Person.Age++;
-            //OnPropertyChanged(nameof(Person));  // Refresh the binding to Person-object
+            {"MyPerson", Person }
         });
+    });
 }

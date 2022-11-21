@@ -13,6 +13,7 @@ public class DataService : IDataService
             new Person { Id = 3, Name = "Helle", Age = 54 }
         };
     }
+
     public List<Person> GetPersons()
     {
         return Persons;
@@ -32,5 +33,10 @@ public class DataService : IDataService
             int existingIndex = Persons.IndexOf(existing);
             Persons[existingIndex] = person;
         }      
+    }
+
+    public void DeletePerson(Person person)
+    {
+        Persons.Remove(person);
     }
 }

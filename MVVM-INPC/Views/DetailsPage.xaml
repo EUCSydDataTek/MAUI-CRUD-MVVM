@@ -7,6 +7,7 @@
              x:DataType="vm:DetailsPageViewModel">
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="DELETE" Command="{Binding DeleteCommand}" />
         <ToolbarItem Text="EDIT" Command="{Binding GoToAddEditCommand}" />
     </ContentPage.ToolbarItems>
 

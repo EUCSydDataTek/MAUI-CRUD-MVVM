@@ -33,6 +33,7 @@ public class AddEditPageViewModel : BaseViewModel
             Person.Age++;
         });
 
+
     private Command saveCommand;
     public ICommand SaveCommand => saveCommand ??= new Command(async () =>
     {

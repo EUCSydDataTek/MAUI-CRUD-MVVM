@@ -39,8 +39,7 @@ public class BaseViewModel : INotifyPropertyChanged
     #region INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 
-    // Access specifier changed from protected to public for OnPropertyChanged
-    public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+    protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
     {
         var changed = PropertyChanged;
         if (changed == null)

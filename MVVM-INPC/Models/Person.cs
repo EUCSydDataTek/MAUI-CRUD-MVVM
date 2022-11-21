@@ -1,8 +1,12 @@
 ﻿namespace MVVM_INPC.Models;
 public class Person : BaseModel
 {
-    public string Name { get; set; }
-
+    string name;
+    public string Name
+    {
+        get { return name; }
+        set { SetProperty(ref name, value); }
+    }
 
     int age;
     public int Age

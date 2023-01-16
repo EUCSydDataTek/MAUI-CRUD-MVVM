@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
+             xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
+             xmlns:converter="clr-namespace:MVVM_INPC.Converters"
              x:Class="MVVM_INPC.Views.AddEditPage"
              Title="AddEditPage"
              Shell.PresentationMode="ModalAnimated"
@@ -10,7 +11,7 @@
     <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="Start">
 
         <Entry
                 Text="{Binding Person.Name}"
@@ -19,20 +20,23 @@
                 HorizontalOptions="Center" />
 
         <Entry
-                Text="{Binding Person.Age}"
+                Text="{Binding Person.Age, Converter={converter:DoNothingConverter}}"
                 Placeholder="Age"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-        <Button
+        <HorizontalStackLayout Spacing="20">
+            <Button
                 Text="Make Older"
-                HorizontalOptions="Center" 
+                HorizontalOptions="Start" 
                 Command="{Binding MakeOlderCommand}"/>
 
-        <Button
+            <Button
                 Text="Save"
-                HorizontalOptions="Center" 
+                HorizontalOptions="Start" 
                 Command="{Binding SaveCommand}"/>
+        </HorizontalStackLayout>
+       
 
     </VerticalStackLayout>
 </ContentPage>

@@ -15,7 +15,6 @@ public class AddEditPageViewModel : BaseViewModel
     public string Mode { get; set; }
 
     private Person person;
-
     public Person Person
     {
         get => person;

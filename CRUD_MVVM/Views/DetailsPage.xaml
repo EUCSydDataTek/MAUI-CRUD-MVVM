@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
-             x:Class="MVVM_INPC.Views.DetailsPage"
-             Title="DetailsPage"
-             x:DataType="vm:DetailsPageViewModel">
+<ContentPage
+    x:Class="MVVM_INPC.Views.DetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
+    Title="DetailsPage"
+    x:DataType="vm:DetailsPageViewModel">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="DELETE" Command="{Binding DeleteCommand}" />
-        <ToolbarItem Text="EDIT" Command="{Binding GoToAddEditCommand}" />
+        <ToolbarItem Command="{Binding DeleteCommand}" Text="DELETE" />
+        <ToolbarItem Command="{Binding GoToAddEditCommand}" Text="EDIT" />
     </ContentPage.ToolbarItems>
 
     <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        Padding="30,0"
+        Spacing="25"
+        VerticalOptions="Center">
 
         <Label
-                Text="{Binding Person.Name}"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            FontSize="32"
+            HorizontalOptions="Center"
+            Text="{Binding Person.Name}" />
 
         <Label
-                Text="{Binding Person.Age}"
-                SemanticProperties.HeadingLevel="Level2"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            FontSize="18"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level2"
+            Text="{Binding Person.Age}" />
 
     </VerticalStackLayout>
 </ContentPage>

@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
-             xmlns:converter="clr-namespace:MVVM_INPC.Converters"
-             x:Class="MVVM_INPC.Views.AddEditPage"
-             Title="AddEditPage"
-             Shell.PresentationMode="ModalAnimated"
-             x:DataType="vm:AddEditPageViewModel">
+<ContentPage
+    x:Class="MVVM_INPC.Views.AddEditPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:MVVM_INPC.Converters"
+    xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
+    Title="AddEditPage"
+    x:DataType="vm:AddEditPageViewModel"
+    Shell.PresentationMode="ModalAnimated">
 
     <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Start">
+        Padding="30,0"
+        Spacing="25"
+        VerticalOptions="Start">
 
         <Entry
-                Text="{Binding Person.Name}"
-                Placeholder="Name"
-                FontSize="32"
-                HorizontalOptions="Start" />
+            FontSize="32"
+            HorizontalOptions="Start"
+            Placeholder="Name"
+            Text="{Binding Person.Name}" />
 
         <Entry
-                Text="{Binding Person.Age, Converter={converter:DoNothingConverter}}"
-                Placeholder="Age"
-                FontSize="18"
-                HorizontalOptions="Start" />
+            FontSize="18"
+            HorizontalOptions="Start"
+            Placeholder="Age"
+            Text="{Binding Person.Age, Converter={converter:DoNothingConverter}}" />
 
         <HorizontalStackLayout Spacing="20">
             <Button
-                Text="Make Older"
-                HorizontalOptions="Start" 
-                Command="{Binding MakeOlderCommand}"/>
+                Command="{Binding MakeOlderCommand}"
+                HorizontalOptions="Start"
+                Text="Make Older" />
 
             <Button
-                Text="Save"
-                HorizontalOptions="Start" 
-                Command="{Binding SaveCommand}"/>
+                Command="{Binding SaveCommand}"
+                HorizontalOptions="Start"
+                Text="Save" />
         </HorizontalStackLayout>
-       
 
     </VerticalStackLayout>
 </ContentPage>

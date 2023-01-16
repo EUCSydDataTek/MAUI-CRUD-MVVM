@@ -17,13 +17,13 @@
                 Text="{Binding Person.Name}"
                 Placeholder="Name"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Start" />
 
         <Entry
                 Text="{Binding Person.Age, Converter={converter:DoNothingConverter}}"
                 Placeholder="Age"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Start" />
 
         <HorizontalStackLayout Spacing="20">
             <Button

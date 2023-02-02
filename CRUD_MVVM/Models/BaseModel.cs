@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MVVM_INPC.Models;
+namespace CRUD_MVVM.Models;
 public class BaseModel : INotifyPropertyChanged
 {
     public int Id { get; set; }
@@ -22,7 +22,7 @@ public class BaseModel : INotifyPropertyChanged
     protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
     {
         var changed = PropertyChanged;
-       
+
         if (changed == null)
             return;
         var invocationlist = changed.GetInvocationList();   // Shows the total numbers of bindings

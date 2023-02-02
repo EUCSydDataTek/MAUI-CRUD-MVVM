@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace MVVM_INPC;
+namespace CRUD_MVVM;
 
 class Program : MauiApplication
 {

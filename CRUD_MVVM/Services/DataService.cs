@@ -1,6 +1,6 @@
-﻿using MVVM_INPC.Models;
+﻿using CRUD_MVVM.Models;
 
-namespace MVVM_INPC.Services;
+namespace CRUD_MVVM.Services;
 public class DataService : IDataService
 {
     List<Person> Persons;
@@ -24,15 +24,15 @@ public class DataService : IDataService
         if (person.Id == 0)
         {
             int maxNumber = Persons.Max(x => x.Id);
-            person.Id =++maxNumber;
+            person.Id = ++maxNumber;
             Persons.Add(person);
         }
-        else 
+        else
         {
-            Person existing =  Persons.FirstOrDefault(x => x.Id == person.Id);
+            Person existing = Persons.FirstOrDefault(x => x.Id == person.Id);
             int existingIndex = Persons.IndexOf(existing);
             Persons[existingIndex] = person;
-        }      
+        }
     }
 
     public void DeletePerson(Person person)

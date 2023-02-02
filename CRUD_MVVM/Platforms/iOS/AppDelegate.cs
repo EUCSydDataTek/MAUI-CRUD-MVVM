@@ -1,6 +1,7 @@
-﻿using Foundation;
+﻿using CRUD_MVVM;
+using Foundation;
 
-namespace MVVM_INPC.Platforms.iOS;
+namespace CRUD_MVVM.Platforms.iOS;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

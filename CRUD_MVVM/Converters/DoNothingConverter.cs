@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace MVVM_INPC.Converters;
+namespace CRUD_MVVM.Converters;
 public class DoNothingConverter : IValueConverter, IMarkupExtension
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

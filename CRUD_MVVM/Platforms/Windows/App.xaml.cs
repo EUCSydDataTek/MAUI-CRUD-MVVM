@@ -1,9 +1,10 @@
-﻿using Microsoft.UI.Xaml;
+﻿using CRUD_MVVM;
+using Microsoft.UI.Xaml;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace MVVM_INPC.WinUI;
+namespace CRUD_MVVM.WinUI;
 
 /// <summary>
 /// Provides application-specific behavior to supplement the default Application class.

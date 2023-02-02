@@ -1,6 +1,6 @@
-﻿using MVVM_INPC.Views;
+﻿using CRUD_MVVM.Views;
 
-namespace MVVM_INPC;
+namespace CRUD_MVVM;
 
 public partial class AppShell : Shell
 {

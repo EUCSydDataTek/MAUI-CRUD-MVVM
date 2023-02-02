@@ -1,4 +1,4 @@
-﻿namespace MVVM_INPC.Models;
+﻿namespace CRUD_MVVM.Models;
 public class Person : BaseModel
 {
     string name;

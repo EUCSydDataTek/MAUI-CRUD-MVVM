@@ -1,11 +1,11 @@
-﻿using MVVM_INPC.Models;
-using MVVM_INPC.Services;
-using MVVM_INPC.Views;
+﻿using CRUD_MVVM.Models;
+using CRUD_MVVM.Services;
+using CRUD_MVVM.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace MVVM_INPC.ViewModels;
+namespace CRUD_MVVM.ViewModels;
 public class ListPageViewModel : BaseViewModel
 {
     public ObservableCollection<Person> Persons { get; } = new();

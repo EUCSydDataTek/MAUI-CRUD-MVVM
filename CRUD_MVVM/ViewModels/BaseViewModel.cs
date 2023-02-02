@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MVVM_INPC.ViewModels;
+namespace CRUD_MVVM.ViewModels;
 public class BaseViewModel : INotifyPropertyChanged
 {
     bool isBusy = false;

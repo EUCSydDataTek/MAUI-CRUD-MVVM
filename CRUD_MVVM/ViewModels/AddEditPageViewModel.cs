@@ -1,8 +1,8 @@
-﻿using MVVM_INPC.Models;
-using MVVM_INPC.Services;
+﻿using CRUD_MVVM.Models;
+using CRUD_MVVM.Services;
 using System.Windows.Input;
 
-namespace MVVM_INPC.ViewModels;
+namespace CRUD_MVVM.ViewModels;
 
 [QueryProperty(nameof(Person), "MyPerson")]
 public class AddEditPageViewModel : BaseViewModel
@@ -36,7 +36,7 @@ public class AddEditPageViewModel : BaseViewModel
     private Command saveCommand;
     public ICommand SaveCommand => saveCommand ??= new Command(async () =>
     {
-            service.SavePerson(Person);
-            await Shell.Current.GoToAsync("..");
+        service.SavePerson(Person);
+        await Shell.Current.GoToAsync("..");
     });
 }

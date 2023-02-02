@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MVVM_INPC.Platforms.iOS;
+namespace CRUD_MVVM.Platforms.iOS;
 
 public class Program
 {

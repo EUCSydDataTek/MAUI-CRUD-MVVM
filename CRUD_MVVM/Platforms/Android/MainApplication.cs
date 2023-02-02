@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MVVM_INPC.Platforms.Android;
+namespace CRUD_MVVM.Platforms.Android;
 
 [Application]
 public class MainApplication : MauiApplication

@@ -1,4 +1,4 @@
-﻿namespace MVVM_INPC;
+﻿namespace CRUD_MVVM;
 
 public partial class App : Application
 {

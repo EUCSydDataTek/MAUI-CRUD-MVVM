@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MVVM_INPC.Views.AddEditPage"
+    x:Class="CRUD_MVVM.Views.AddEditPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:converter="clr-namespace:MVVM_INPC.Converters"
-    xmlns:vm="clr-namespace:MVVM_INPC.ViewModels"
+    xmlns:converter="clr-namespace:CRUD_MVVM.Converters"
+    xmlns:vm="clr-namespace:CRUD_MVVM.ViewModels"
     Title="AddEditPage"
     x:DataType="vm:AddEditPageViewModel"
     Shell.PresentationMode="ModalAnimated">

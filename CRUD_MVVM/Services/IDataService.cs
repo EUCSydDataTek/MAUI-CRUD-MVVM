@@ -1,6 +1,6 @@
-﻿using MVVM_INPC.Models;
+﻿using CRUD_MVVM.Models;
 
-namespace MVVM_INPC.Services;
+namespace CRUD_MVVM.Services;
 public interface IDataService
 {
     List<Person> GetPersons();

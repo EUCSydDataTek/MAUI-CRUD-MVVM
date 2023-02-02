@@ -1,6 +1,7 @@
-﻿using Foundation;
+﻿using CRUD_MVVM;
+using Foundation;
 
-namespace MVVM_INPC.Platforms.MacCatalyst;
+namespace CRUD_MVVM.Platforms.MacCatalyst;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

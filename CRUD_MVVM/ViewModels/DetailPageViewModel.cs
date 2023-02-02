@@ -1,9 +1,9 @@
-﻿using MVVM_INPC.Models;
-using MVVM_INPC.Services;
-using MVVM_INPC.Views;
+﻿using CRUD_MVVM.Models;
+using CRUD_MVVM.Services;
+using CRUD_MVVM.Views;
 using System.Windows.Input;
 
-namespace MVVM_INPC.ViewModels;
+namespace CRUD_MVVM.ViewModels;
 
 [QueryProperty(nameof(Person), "MyPerson")]
 public class DetailsPageViewModel : BaseViewModel

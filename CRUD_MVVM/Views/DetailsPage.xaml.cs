@@ -1,6 +1,6 @@
-using MVVM_INPC.ViewModels;
+using CRUD_MVVM.ViewModels;
 
-namespace MVVM_INPC.Views;
+namespace CRUD_MVVM.Views;
 
 public partial class DetailsPage : ContentPage
 {

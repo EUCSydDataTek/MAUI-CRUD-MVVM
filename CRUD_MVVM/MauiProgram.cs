@@ -3,6 +3,9 @@ using CRUD_MVVM.ViewModels;
 using Microsoft.Extensions.Logging;
 using CRUD_MVVM;
 using CRUD_MVVM.Views;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter;
 
 namespace CRUD_MVVM;
 
@@ -29,6 +32,12 @@ public static class MauiProgram
 
         builder.Services.AddTransient<AddEditPage>();
         builder.Services.AddTransient<AddEditPageViewModel>();
+
+        AppCenter.Start("android={Your app secret here};" +
+                  "uwp={Your UWP App secret here};" +
+                  "ios={Your iOS App secret here};" +
+                  "macos={Your macOS App secret here};",
+                  typeof(Analytics), typeof(Crashes));
 
 #if DEBUG
         builder.Logging.AddDebug();

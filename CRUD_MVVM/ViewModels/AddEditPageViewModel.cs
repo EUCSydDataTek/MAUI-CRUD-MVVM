@@ -1,5 +1,8 @@
 ﻿using CRUD_MVVM.Models;
 using CRUD_MVVM.Services;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System.Drawing;
 using System.Windows.Input;
 
 namespace CRUD_MVVM.ViewModels;
@@ -30,6 +33,11 @@ public class AddEditPageViewModel : BaseViewModel
         execute: () =>
         {
             Person.Age++;
+
+            Analytics.TrackEvent("Button clicked");
+
+            Analytics.TrackEvent("Make Older", new Dictionary<string, string>
+            { {"Age", Person.Age.ToString()} });
         });
 
 
@@ -38,5 +46,20 @@ public class AddEditPageViewModel : BaseViewModel
     {
         service.SavePerson(Person);
         await Shell.Current.GoToAsync("..");
+    });
+
+    private Command crashCommand;
+    public ICommand CrashCommand => crashCommand ??= new Command(async () =>
+    {
+        try
+        {
+            Crashes.GenerateTestCrash();
+            service.SavePerson(Person);
+            await Shell.Current.GoToAsync("..");
+        }
+        catch (Exception exception)
+        {
+            Crashes.TrackError(exception);
+        }
     });
 }

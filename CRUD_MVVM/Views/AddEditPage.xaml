@@ -36,6 +36,11 @@
                 Command="{Binding SaveCommand}"
                 HorizontalOptions="Start"
                 Text="Save" />
+
+            <Button
+                Command="{Binding CrashCommand}"
+                HorizontalOptions="Start"
+                Text="Crash" />
         </HorizontalStackLayout>
 
     </VerticalStackLayout>

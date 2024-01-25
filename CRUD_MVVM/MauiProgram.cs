@@ -33,10 +33,7 @@ public static class MauiProgram
         builder.Services.AddTransient<AddEditPage>();
         builder.Services.AddTransient<AddEditPageViewModel>();
 
-        AppCenter.Start("android={Your app secret here};" +
-                  "uwp={Your UWP App secret here};" +
-                  "ios={Your iOS App secret here};" +
-                  "macos={Your macOS App secret here};",
+        AppCenter.Start("android=???",
                   typeof(Analytics), typeof(Crashes));
 
 #if DEBUG

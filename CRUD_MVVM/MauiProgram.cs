@@ -33,7 +33,7 @@ public static class MauiProgram
         builder.Services.AddTransient<AddEditPage>();
         builder.Services.AddTransient<AddEditPageViewModel>();
 
-        AppCenter.Start("android=???",
+        AppCenter.Start("android=c7d7c2d1-0d3d-435c-9793-9cb207e0343a;",
                   typeof(Analytics), typeof(Crashes));
 
 #if DEBUG

@@ -13,5 +13,6 @@ public class Person : BaseModel
     {
         get { return age; }
         set { SetProperty(ref age, value); }
+        //set { age = value; }  // test for at se at INPC er nødvendig
     }
 }

@@ -1,4 +1,4 @@
-#	MAUI-CRUD-MVVM
+#	MAUI-CRUD-MVVM med native ChangeNotitication og Commands
 
 En CRUD app, der benytter sig af MVVM design pattern.
 

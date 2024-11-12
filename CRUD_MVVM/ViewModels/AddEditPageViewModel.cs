@@ -1,42 +1,27 @@
-﻿using CRUD_MVVM.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CRUD_MVVM.Models;
 using CRUD_MVVM.Services;
 using System.Windows.Input;
 
 namespace CRUD_MVVM.ViewModels;
 
 [QueryProperty(nameof(Person), "MyPerson")]
-public class AddEditPageViewModel : BaseViewModel
+public partial class AddEditPageViewModel(IDataService service) : BaseViewModel
 {
-    private readonly IDataService service;
-    public AddEditPageViewModel(IDataService service)
-    {
-        this.service = service;
-    }
+    // Title = Person.Id == 0 ? "Add Person" : "Edit Person";
     public string Mode { get; set; }
 
+    [ObservableProperty]
     private Person person;
-    public Person Person
-    {
-        get => person;
-        set
-        {
-            SetProperty(ref person, value);
-            Title = Person.Id == 0 ? "Add Person" : "Edit Person";
-        }
-    }
 
-    private Command makeOlderCommand;
-    public ICommand MakeOlderCommand => makeOlderCommand ??= new Command(
-        execute: () =>
-        {
-            Person.Age++;
-        });
+    [RelayCommand]
+    public void MakeOlder() => Person.Age++;
 
-
-    private Command saveCommand;
-    public ICommand SaveCommand => saveCommand ??= new Command(async () =>
+    [RelayCommand]
+    public async Task Save()
     {
         service.SavePerson(Person);
         await Shell.Current.GoToAsync("..");
-    });
+    }
 }

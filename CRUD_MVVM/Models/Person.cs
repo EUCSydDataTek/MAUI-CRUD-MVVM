@@ -3,8 +3,7 @@
 namespace CRUD_MVVM.Models;
 public partial class Person : ObservableObject
 {
-    [ObservableProperty]
-    int id;
+    public int Id { get; set; }
 
     [ObservableProperty]
     string name;

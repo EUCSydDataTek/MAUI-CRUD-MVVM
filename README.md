@@ -1,4 +1,4 @@
-#	MAUI-CRUD-MVVM med CommunityToolkit.Mvvm ChangeNotitication og Commands
+#	MAUI-CRUD-MVVM med CommunityToolkit.Mvvm ChangeNotification og Commands
 
 En CRUD app, der benytter sig af MVVM design pattern.
 

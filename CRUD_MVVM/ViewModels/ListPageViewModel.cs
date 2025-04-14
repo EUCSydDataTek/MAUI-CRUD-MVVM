@@ -6,13 +6,9 @@ using System.Diagnostics;
 using System.Windows.Input;
 
 namespace CRUD_MVVM.ViewModels;
-public class ListPageViewModel : BaseViewModel
+public class ListPageViewModel(IDataService service) : BaseViewModel
 {
     public ObservableCollection<Person> Persons { get; } = new();
-    public ListPageViewModel(IDataService service)
-    {
-        this.service = service;
-    }
 
     private Command getPersonsCommand;
     public ICommand GetPersonsCommand => getPersonsCommand ??= new Command(async () => await GetPersonsAsync());
@@ -59,7 +55,7 @@ public class ListPageViewModel : BaseViewModel
     });
 
     private Command goToAddEditCommand;
-    private readonly IDataService service;
+
 
     public ICommand GoToAddEditCommand => goToAddEditCommand ??= new Command(async () =>
     {

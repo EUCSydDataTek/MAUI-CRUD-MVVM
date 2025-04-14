@@ -17,18 +17,18 @@
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="models:Person">
                 <Grid Padding="10">
-                    <Frame HeightRequest="80">
+                    <Border HeightRequest="80">
 
                         <!--  Add the Gesture Recognizer  -->
-                        <Frame.GestureRecognizers>
+                        <Border.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ListPageViewModel}}, Path=GoToDetailsCommand}" CommandParameter="{Binding .}" />
-                        </Frame.GestureRecognizers>
+                        </Border.GestureRecognizers>
 
                         <VerticalStackLayout Padding="0">
                             <Label Text="{Binding Name}" />
                             <Label Text="{Binding Age, StringFormat='{0:} år'}" />
                         </VerticalStackLayout>
-                    </Frame>
+                    </Border>
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>

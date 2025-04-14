@@ -33,7 +33,7 @@ public class DetailsPageViewModel : BaseViewModel
     private Command deleteCommand;
     public ICommand DeleteCommand => deleteCommand ??= new Command(async () =>
     {
-        bool answer = await Shell.Current.DisplayAlert("DELETE?", "Are you shure?", "Ok", "Cancel");
+        bool answer = await Shell.Current.DisplayAlert("DELETE?", "Are you sure?", "Ok", "Cancel");
         if (answer)
         {
             service.DeletePerson(Person);

@@ -9,10 +9,7 @@
     x:DataType="vm:AddEditPageViewModel"
     Shell.PresentationMode="ModalAnimated">
 
-    <VerticalStackLayout
-        Padding="30,0"
-        Spacing="25"
-        VerticalOptions="Start">
+    <VerticalStackLayout Padding="30,0" Spacing="25">
 
         <Entry
             FontSize="32"

@@ -6,13 +6,8 @@ using System.Diagnostics;
 using System.Windows.Input;
 
 namespace CRUD_MVVM.ViewModels;
-public class ListPageViewModel : BaseViewModel
+public class ListPageViewModel(IDataService service) : BaseViewModel
 {
-    private readonly IDataService service;
-    public ListPageViewModel(IDataService service)
-    {
-        this.service = service;
-    }
     public ObservableCollection<Person> Persons { get; } = new();
 
     private Command getPersonsCommand;
